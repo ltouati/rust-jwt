@@ -66,12 +66,16 @@ impl JoseHeader for Header {
 pub enum HeaderType {
     #[serde(rename = "JWT")]
     JsonWebToken,
+    #[serde(rename = "JWS")]
+    JsonWebSignature,
 }
 
 #[derive(Copy, Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub enum HeaderContentType {
     #[serde(rename = "JWT")]
     JsonWebToken,
+    #[serde(rename = "JWS")]
+    JsonWebSignature,
 }
 
 /// A header that only contains the algorithm type. The `ToBase64`
